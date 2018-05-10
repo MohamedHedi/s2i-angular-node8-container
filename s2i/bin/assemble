@@ -11,8 +11,9 @@ echo "---> Installing NPM Dependencies (with dev)"
 npm install
 npm install --only=dev
 
-echo "---> Building Angular CLI Application"
-./node_modules/@angular/cli/bin/ng build --prod
+#do not fail when there is no build script
+echo "---> Building Application"
+npm run build --if-present
 
 popd
 
