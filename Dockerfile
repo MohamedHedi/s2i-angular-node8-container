@@ -32,6 +32,9 @@ RUN yum install -y \
 https://www.softwarecollections.org/repos/rhscl/httpd24/epel-7-x86_64/noarch/rhscl-httpd24-epel-7-x86_64-1-2.noarch.rpm && \
   yum install -y --setopt=tsflags=nodocs httpd24 && \
   yum clean all -y
+  
+# Install git
+RUN yum install -y git  
 
 # Download and install a binary from nodejs.org
 # Add the gpg keys listed at https://github.com/nodejs/node
